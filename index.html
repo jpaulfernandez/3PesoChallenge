@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Website</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-flex">
+        <h1 class="title">3 Peso Challenge</h1>
+      </div>
+      <div class="container-flex">
+        <ul class="tab">
+          <li data-bind="css:{active: video}"> <a href="#" data-bind="click: toggleView">Our Cause</a></li>
+          <li data-bind="css:{active: !video()}"><a href="#" data-bind="click: toggleView">Subscribe</a></li>
+        </ul>
+      </div>
+      <!--ko if: video-->
+      <div class="container-flex">
+        <iframe class="yt-video" src="https://www.youtube.com/embed/G0E7zdhoS7A?autoplay=0&amp;controls=0"></iframe>
+      </div>
+      <!-- /ko-->
+      <!--ko ifnot: video-->
+      <div class="container-flex">
+        <div class="form col-sm-8">
+          <h1 class="sub-title">Subscribe to Get Notified</h1>
+          <h2 class="desc">Our platform is not launched yet, if you want to get notified please enter your details below</h2>
+          <div class="form-group">
+            <label>First Name</label>
+            <input class="form-control" type="text"/>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input class="form-control" type="email"/>
+          </div>
+          <button class="btn btn-primary">Subscribe</button>
+        </div>
+      </div>
+      <!-- /ko-->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdjns.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script type="text/javascript" src="assets/js/bundle.js"></script>
+  </body>
+</html>
